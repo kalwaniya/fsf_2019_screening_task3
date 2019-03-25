@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'sample1.ui'
-#
-# Created by: PyQt5 UI code generator 5.10.1
-#
-# WARNING! All changes made in this file will be lost!
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 import xlrd
@@ -539,7 +531,7 @@ class Ui_MainWindow(object):
 
     def exit(self):
         import sys
-        self.showdlg("Thank YOU for Visiting....Hope you enjoyed !!")
+        self.showdlg("Thank YOU for Visiting!")
         sys.exit()
 
     
