@@ -83,17 +83,16 @@ pip3 install PyQt5
 ## Code Snippet
 
 ```python
-        steel_chosen, ok=QtWidgets.QInputDialog.getItem(MainWindow,"Steel","Choose a Steel Section",steels,0,False)
-        if ok and steel_chosen:
-            self.lineEdit_9.setText(steel_chosen)  
-
-        if steel_chosen=='Angles':
-
-            sql="select Designation from Angles"
-            angles=[]
+        sql="select Designation from Channels"
+            channels=[]
             cur=conn.execute(sql)
             for row in cur:
-                angles.append(row[0])
+                channels.append(row[0])
+
+            channel_option, ok=QtWidgets.QInputDialog.getItem(MainWindow,"Steel","Choose a Designation from Channels Section",channels,0,False)
+            if ok and channel_option:
+                self.lineEdit_6.setText(channel_option)
+
 ```
 
 
